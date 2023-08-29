@@ -11,6 +11,7 @@ export const dbConfig : PostgresConnectionOptions  = {
     database: "todo",
     entities: [__dirname + "/../**/*.entity{.ts,.js}"],
     migrations: ["dist/db/migrations/*.js"],
+    synchronize: true,
 
 
 }

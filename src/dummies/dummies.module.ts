@@ -10,5 +10,6 @@ import { DummiesService } from './dummies.service';
     ],
     controllers: [DummiesController],
     providers: [DummiesService]
+    
 })
 export class DummiesModule {}
