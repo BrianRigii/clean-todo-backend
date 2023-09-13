@@ -9,7 +9,7 @@ export class DummiesController {
     }
     @Post()
     create(@Body() req: CreateDummyDto) {
-        console.log(req);
+        
         return this.dummiesService.create(req);
     }
 }
