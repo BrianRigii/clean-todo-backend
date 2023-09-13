@@ -11,6 +11,5 @@ export class DummiesController {
     create(@Body() req: CreateDummyDto) {
         console.log(req);
         return this.dummiesService.create(req);
-
     }
 }
