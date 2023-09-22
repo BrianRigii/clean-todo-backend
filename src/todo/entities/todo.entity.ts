@@ -1,3 +1,5 @@
+import { User } from "src/users/entities/user.entity";
+import { ManyToOne } from "typeorm";
 import { Column } from "typeorm/decorator/columns/Column";
 import { CreateDateColumn } from "typeorm/decorator/columns/CreateDateColumn";
 import { PrimaryGeneratedColumn } from "typeorm/decorator/columns/PrimaryGeneratedColumn";
@@ -20,6 +22,9 @@ export class Todo{
     
     @Column({default: false})
     isDeleted: boolean;
+
+    @ManyToOne(()=> User, user => user.todos)
+    user: User;
     
     @CreateDateColumn()
     created_at: Date
