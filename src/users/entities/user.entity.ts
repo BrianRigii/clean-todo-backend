@@ -12,7 +12,7 @@ export class User {
     name: string;
     @Column({default: true})
     active: boolean;
-    @Column()
+    @Column({select: false})
     password: string;
 
    @OneToMany(() => Todo, todo => todo.user)
