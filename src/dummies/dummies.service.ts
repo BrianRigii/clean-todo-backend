@@ -14,4 +14,8 @@ export class DummiesService {
         return this.dummyRepository.save(dummy);
     }
 
+    findAll(): Promise<Dummy[]> {
+        return this.dummyRepository.find();
+    }
+
 }

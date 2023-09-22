@@ -1,9 +1,14 @@
-import { Controller, Post } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
-    @Post()
-    create() {
-        return 'This action adds a new user';
+  constructor(private userService : UsersService){}
+
+
+    @Get()
+    findAll(){
+        return this.userService.findAll();
     }
 }

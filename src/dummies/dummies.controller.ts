@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Req } from '@nestjs/common';
+import { Body, Controller, Get, Post, Req } from '@nestjs/common';
 import { DummiesService } from './dummies.service';
 import { CreateDummyDto } from './dto/create-dummy.dto';
 
@@ -11,5 +11,10 @@ export class DummiesController {
     create(@Body() req: CreateDummyDto) {
         
         return this.dummiesService.create(req);
+    }
+
+    @Get()
+    findAll() {
+        return this.dummiesService.findAll();
     }
 }
