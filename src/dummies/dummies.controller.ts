@@ -1,7 +1,9 @@
 import { Body, Controller, Get, Post, Req } from '@nestjs/common';
 import { DummiesService } from './dummies.service';
 import { CreateDummyDto } from './dto/create-dummy.dto';
+import { Public } from 'src/auth/public';
 
+@Public()
 @Controller('dummies')
 export class DummiesController {
     constructor(private dummiesService: DummiesService) {
