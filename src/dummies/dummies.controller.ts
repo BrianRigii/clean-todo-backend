@@ -19,4 +19,9 @@ export class DummiesController {
     findAll() {
         return this.dummiesService.findAll();
     }
+
+    @Get("/live")
+    checkLive(){
+        return "server is live";
+    }
 }
