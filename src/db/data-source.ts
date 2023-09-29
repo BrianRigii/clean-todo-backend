@@ -5,7 +5,7 @@ import { PostgresConnectionOptions } from "typeorm/driver/postgres/PostgresConne
 export const dbConfig : PostgresConnectionOptions  = {
     type: "postgres",
     host: process.env.HOST ||"localhost",
-    port: parseInt(<string>process.env.PORT ?? "3306", 10),
+    port: parseInt(<string>process.env.PGPORT ?? "3306", 10),
     username: process.env.USER || 'postgress',
     password: process.env.PASSWORD || '123456', 
     database: process.env.DATABASE||'todo',
