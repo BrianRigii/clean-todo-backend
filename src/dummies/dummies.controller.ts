@@ -22,6 +22,6 @@ export class DummiesController {
 
     @Get("/live")
     checkLive(){
-        return "server is live";
+        return "server is live now";
     }
 }
